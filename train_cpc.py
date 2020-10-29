@@ -3,7 +3,8 @@ Main module training the CPC model.
 """
 
 from os.path import join, basename, dirname, exists
-import keras
+# import keras
+from tensorflow import keras
 import os
 from data_generator import NCEGenerator
 from cpc_model import network_cpc, get_custom_objects_cpc

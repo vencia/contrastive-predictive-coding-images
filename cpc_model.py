@@ -2,9 +2,9 @@
 This module implements the contrastive-predictive-coding model for image processing.
 """
 
-import keras
+from tensorflow import keras
 import tensorflow as tf
-from keras import backend as K
+from tensorflow.keras import backend as K
 import numpy as np
 import math
 

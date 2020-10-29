@@ -13,7 +13,7 @@ from tqdm import tqdm
 import skimage.color
 import scipy.ndimage
 import skimage.transform
-from scipy.misc import imsave
+import imageio
 
 
 def create_mnist_dataset_npy(input_dir, output_dir):
@@ -88,7 +88,7 @@ def create_mnist_dataset_npy(input_dir, output_dir):
 
         idx = np.random.choice(len(x), n, replace=False)
         for i, (image, label) in enumerate(zip(x[idx], y[idx])):
-            imsave(join(output_images_dir, '{i}_{label}.png'.format(i=i, label=label)), image)
+            imageio.imwrite(join(output_images_dir, '{i}_{label}.png'.format(i=i, label=label)), image)
 
     # Output dir
     if not exists(output_dir):

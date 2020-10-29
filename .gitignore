@@ -1,0 +1,7 @@
+*__pycache__/
+*.pyc
+.idea
+
+resources/data
+resources/cpc_model
+Pipfile.lock
